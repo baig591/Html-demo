@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Sunshine - Your Comfort is Our Priority</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f4f4; /* Light background for contrast */
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #0054a6; /* Primary blue color */
+    }
+
+    /* Header & Hero Section */
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&auto=format&fit=crop') center/cover no-repeat;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      padding: 18px 0;
+      border-bottom: 3px solid #ff9900; /* Accent color border */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #0054a6;
+      padding: 5px 10px;
+      transition: 0.3s;
+      border-radius: 4px;
+    }
+    nav a:hover {
+      color: white;
+      background: #ff9900;
+    }
+
+    /* Section Styling */
+    .content-section {
+      padding: 60px 10%;
+      line-height: 1.7;
+      text-align: center;
+    }
+    .content-section:nth-child(odd) {
+      background-color: white;
+    }
+    .content-section h2 {
+      margin-bottom: 40px;
+      font-size: 2.5em;
+    }
+
+    /* Room Cards (Newer, improved style) */
+    .room-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .room-card {
+      width: 300px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .room-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+    .room-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .room-card-body {
+      padding: 20px;
+    }
+    .room-card-body h3 {
+      margin-top: 0;
+      color: #ff9900;
+    }
+    .room-card-body strong {
+      color: #0054a6;
+      font-size: 1.2em;
+      display: block;
+      margin-top: 10px;
+    }
+    
+    /* Booking Form */
+    #booking {
+        background: #e6f7ff; /* Lighter blue background */
+    }
+    .booking-form {
+      max-width: 450px;
+      margin: auto;
+      text-align: left;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .booking-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+    }
+    .booking-form input[type="text"],
+    .booking-form input[type="date"],
+    .booking-form select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: content-box;
+      font-size: 1em;
+    }
+    .booking-form button {
+      background: #0054a6;
+      color: white;
+      padding: 12px 20px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: 700;
+      transition: background 0.3s;
+    }
+    .booking-form button:hover {
+      background: #ff9900;
+    }
+
+    /* Contact & Footer */
+    #contact {
+      background: #f0f0f0;
+      padding-bottom: 20px;
+    }
+    #contact p {
+        font-size: 1.1em;
+        margin: 10px 0;
+        color: #555;
+    }
+    footer {
+      background: #003e73;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+    }
+  </style>
+</head>
+<body>
+  <header id="home">
+    <h1>Hotel Sunshine</h1>
+    <p>Your comfort is our priority</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#rooms">Rooms & Rates</a>
+    <a href="#booking">Book Now</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <section class="content-section" id="rooms">
+    <h2>☀️ Our Rooms & Suites</h2>
+    <p style="max-width: 700px; margin: 0 auto 50px;">
+        Experience luxury and comfort tailored to your needs. All rooms include complimentary Wi-Fi and access to our wellness center.
+    </p>
+    <div class="room-container">
+
+      <div class="room-card">
+        <img src="https://image.pollinations.ai/prompt/cozy%20single%20hotel%20room%20with%20a%20comfortable%20bed%20and%20modern%20decor" alt="Cozy single hotel room with a comfortable bed and modern decor" />
+        <div class="room-card-body">
+          <h3>Single Room</h3>
+          <p>Cozy and efficient space perfect for solo travelers or short business trips. Includes a queen-size bed.</p>
+          <strong>$90 / Night</strong>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="https://image.pollinations.ai/prompt/spacious%20double%20hotel%20room%20with%20two%20beds%20and%20large%20windows" alt="Spacious double hotel room with two beds and large windows" />
+        <div class="room-card-body">
+          <h3>Double Room</h3>
+          <p>Comfortable stay for two guests. Features a king-size bed or two double beds, with a beautiful city view.</p>
+          <strong>$150 / Night</strong>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&auto=format&fit=crop" alt="Luxury deluxe hotel suite with separate living area" />
+        <div class="room-card-body">
+          <h3>Deluxe Suite</h3>
+          <p>Our most spacious and elegant option. Separate living area, luxury bedding, and a complimentary welcome basket.</p>
+          <strong>$250 / Night</strong>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+  <hr/>
+
+  <section class="content-section" id="booking">
+    <h2>🛎️ Book Your Stay Today</h2>
+    <form class="booking-form">
+      <label for="full-name">Full Name</label>
+      <input type="text" id="full-name" required placeholder="John Doe" />
+
+      <label for="check-in">Check-in Date</label>
+      <input type="date" id="check-in" required />
+
+      <label for="check-out">Check-out Date</label>
+      <input type="date" id="check-out" required />
+
+      <label for="room-type">Room Type</label>
+      <select id="room-type" required>
+        <option value="" disabled selected>Select a Room Type</option>
+        <option value="single">Single Room ($90)</option>
+        <option value="double">Double Room ($150)</option>
+        <option value="deluxe">Deluxe Suite ($250)</option>
+      </select>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+
+  <hr/>
+
+  <section class="content-section" id="contact">
+    <h2>📞 Contact Us</h2>
+    <p>We are here to help you plan your perfect stay.</p>
+    <p><strong>Phone:</strong> +1 234 567 890</p>
+    <p><strong>Email:</strong> info@hotelsunshine.com</p>
+    <p><strong>Location:</strong> Sunshine Road, City Center, 10001</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Hotel Sunshine - All Rights Reserved
+  </footer>
+
+</body>
+</html>
